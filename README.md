@@ -64,3 +64,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Instalando as dependências do Breeze
+
+```sh
+$ composer require laravel/breeze --dev
+```
+
+Instalando o breeze
+```sh
+$ php artisan breeze:install
+```
+
+## Executando um ouvite NPM
+O Breeze precisa ser inicializado e ele pode ser iniciado pelo NPM.
+Ao executar pelo npm, ele também inicia o serviço do servidor do php do laravel.
+
+```sh
+$ npm run dev
+```
