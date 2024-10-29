@@ -21,8 +21,10 @@
 
                 <div class="mt-3 ps-5 text-end">
                     {{-- post delete --}}
-                    @can('post.delete', $post) {{-- Passando o post como parametro para o Gate --}}
-                        <a href="#" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-6 rounded">Delete</a>
+                    {{-- Validando o Gate com o 'post.delete' e também passando o $post como argumento --}}
+                    @can('post.delete', $post)
+                        {{-- Rota chamada, passando o id do post como parametro --}}
+                        <a href="{{ route('post.delete', ['id' => $post->id]) }}" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-6 rounded">Delete</a>
                     @endcan
                 </div>
             </div>
