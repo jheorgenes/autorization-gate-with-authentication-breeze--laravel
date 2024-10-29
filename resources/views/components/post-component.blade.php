@@ -19,6 +19,12 @@
                     <p class="mt-3">{{ $post->content }}</p>
                 </div>
 
+                <div class="mt-3 ps-5 text-end">
+                    {{-- post delete --}}
+                    @can('post.delete', $post) {{-- Passando o post como parametro para o Gate --}}
+                        <a href="#" class="bg-red-400 hover:bg-red-600 text-white font-bold py-2 px-6 rounded">Delete</a>
+                    @endcan
+                </div>
             </div>
         </div>
     </div>
