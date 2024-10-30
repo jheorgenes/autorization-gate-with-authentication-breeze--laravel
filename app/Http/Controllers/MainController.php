@@ -36,6 +36,11 @@ class MainController extends Controller
         if(Gate::denies('post.delete', $post)) {
             abort(403, 'Você não tem permissão para eliminar um post');
         }
-        echo 'Delete Post';
+
+        // Se o usuário tiver acesso de 'post.delete'.
+        // delete the post
+        $post->delete();
+
+        return redirect()->route('dashboard');
     }
 }
